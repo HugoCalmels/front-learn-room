@@ -27,6 +27,9 @@ export const MoocList = () => {
   }, []);
 
   const getCourses = async () => {
+    console.log('---------')
+    console.log(`${process.env.REACT_APP_API_URL}courses`)
+    console.log('---------')
     const config = {
       method: "GET",
       mode: "cors",
@@ -41,9 +44,7 @@ export const MoocList = () => {
       config
     ).catch((error) => error);
 
-    console.log('---------')
-    console.log(`${process.env.REACT_APP_API_URL}courses`)
-    console.log('---------')
+    
     console.log(res)
     console.log('---------')
   
