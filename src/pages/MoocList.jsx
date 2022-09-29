@@ -38,15 +38,17 @@ export const MoocList = () => {
       config
     ).catch((error) => error);
 
-    if (res instanceof Error) {
-      const error = await res.json();
-      const messages = `${[...Object.entries(error)]}`;
-      flash.setType("danger");
-      flash.setMessage(messages);
-    } else {
+    console.log('---------')
+    console.log(`${process.env.REACT_APP_API_URL}courses`)
+    console.log('---------')
+    console.log(res)
+    console.log('---------')
+  
       const data = await res.json();
       setMoocData(data);
-    }
+    console.log('---------')
+    console.log(data)
+    console.log('---------')
     setIsLoading(false);
   };
 
