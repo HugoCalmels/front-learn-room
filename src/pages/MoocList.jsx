@@ -13,6 +13,9 @@ const MoocListStyled = styled.div`
 `;
 
 export const MoocList = () => {
+
+  console.log("MOOOOOC LIST")
+
   const [moocData, setMoocData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
