@@ -19,7 +19,7 @@ export const MoocList = () => {
   const [moocData, setMoocData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const flash = useContext(FlashContext);
+  //const flash = useContext(FlashContext);
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
